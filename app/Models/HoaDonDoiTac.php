@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DoiTac extends Model
+class HoaDonDoiTac extends Model
 {
     use HasFactory;
-    protected $table="DoiTac";
+    protected $table="HoaDonDoiTac";
     public $timestamp = false;
     public function HoaDon($value ="")
     {
-        return $this->hasMany(HoaDon::class, "DoiTacid", "id");
+        return $this->hasOne(HoaDon::class, "LinkId", "id");
     }
-    public function HoaDonDoiTac($value ="")
+    public function DoiTac($value ="")
     {
-        return $this->hasMany(HoaDonDoiTac::class, "doitacId", "id");
+        return $this->hasOne(DoiTac::class, "doitacId", "id");
     }
 }

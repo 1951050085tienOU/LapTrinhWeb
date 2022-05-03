@@ -1,5 +1,3 @@
-
-
 function SetTimeHeader(){
     var toDay = new Date();
     timeString = "";
@@ -20,6 +18,26 @@ function SetTimeHeader(){
     var headerTime = document.getElementsByClassName('header--time');
     headerTime[0].innerHTML = timeString;
 
-    
-
 }
+
+
+let mychart = document.getElementsByClassName("mychart");
+
+let massPopchart = new Chart(mychart[0], {
+    type:'bar',
+    data:{
+        labels:['Recent Month', 'Total'],
+        datasets:[{
+            label:"Electricity",
+            data:[40, 60]
+        }]
+    }, 
+    option:{
+
+    }
+});
+
+
+// fetch('server.php').then((res)=>res.json()).then(response=>{
+//     console.log(response);
+// }).catch(error => console.log(error));

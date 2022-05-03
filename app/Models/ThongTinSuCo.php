@@ -10,9 +10,9 @@ class ThongTinSuCo extends Model
     use HasFactory;
     protected $table="ThongTinSuCo";
     public $timestamp = false;
-    public function HoaDon($value ="")
+    public function HoaDonSuCo($value ="")
     {
-        return $this->belongsTo(HoaDon::class, "id", "id");
+        return $this->belongsTo(HoaDonSuCo::class, "id", "id");
     }
     public function ThongTinCanHo($value ="")
     {

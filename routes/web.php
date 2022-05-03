@@ -20,6 +20,7 @@ Route::get('/', function () {
 
 
 
+
 // Route::get('hoadon', ['as'=>'hoadon', 'uses' => 'HoaDonController@index']);
 // Route::resource('index', 'HoaDonController');
 // Route::get('hoadon', ['as' => 'hoaDon', 'uses' => "HoaDonController@Index"]);
@@ -37,3 +38,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\layoutController::class, 'index'])->name('home');
