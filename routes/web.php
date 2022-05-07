@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 
 
+
 // Route::get('hoadon', ['as'=>'hoadon', 'uses' => 'HoaDonController@index']);
 // Route::resource('index', 'HoaDonController');
 // Route::get('hoadon', ['as' => 'hoaDon', 'uses' => "HoaDonController@Index"]);
