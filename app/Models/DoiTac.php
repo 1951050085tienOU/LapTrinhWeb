@@ -8,10 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class DoiTac extends Model
 {
     use HasFactory;
-    protected $table="DoiTac";
+    protected $table="doitac";
     public $timestamp = false;
-    public function HoaDon($value ="")
-    {
-        return $this->hasMany(HoaDon::class, "DoiTacid", "id");
-    }
 }

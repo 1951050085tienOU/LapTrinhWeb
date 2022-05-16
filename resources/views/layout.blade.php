@@ -25,8 +25,7 @@
     <script>
       window.onload = function() {
         SetTimeHeader();
-      }
-      SetTimeHeader();
+      };
     </script>
 </head>
 <body>
@@ -38,12 +37,12 @@
     </div>
     <div class="header--logo__text">NICE APARTMENT</div>
   </div>
-  <div class="header--time">
+  <div id="headerTimeLayout">
   </div>
   <div class="header--close">
   @can('authenticated')
     <div class="user__img--container">
-      <img src="images/userImage.jpg" alt="" class="user--img">
+    <img src="{{Auth::user()->Avatar}}" alt="" class="user--img">
     </div>
   @endcan
       <div class="dropdown">
@@ -60,7 +59,7 @@
                 <a class="dropdown-item" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                                   document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
+                                  {{ __('Đăng xuất') }}
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -68,7 +67,7 @@
                 </form>
             </div>
             </a></li>
-            @endcan
+            @endcan  
           </ul>
       </div>
   </div>
